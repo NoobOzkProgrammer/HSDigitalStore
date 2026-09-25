@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --brand-navy: #102D5C;
+    --brand-navy-dark: #0A1C3A;
+    --brand-navy-light: #1A3E7A;
+    --brand-yellow: #FFC21A;
+    --brand-yellow-hover: #E5AD12;
+    --brand-cyan: #14BDEB;
+    --brand-teal: #0D9DA6;
+    --brand-cream: #F6F1E8;
+    --brand-surface: #FAF7F2;
+    --brand-border: #E2DDD5;
+    --brand-border-muted: #ECE7DE;
+    --brand-text: #102D5C;
+    --brand-text-secondary: #3E4D64;
+    --brand-text-muted: #6B7B96;
+    --brand-error: #D9383A;
+    --brand-success: #0E9F6E;
+  }
+
+  body {
+    background-color: var(--brand-cream);
+    color: var(--brand-text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Inter", "Helvetica Neue", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* Custom Utilities for HSDigitalStore Theme */
+.bg-cream { background-color: #F6F1E8; }
+.bg-cream-surface { background-color: #FAF7F2; }
+.bg-navy { background-color: #102D5C; }
+.bg-navy-dark { background-color: #0A1C3A; }
+.bg-brand-yellow { background-color: #FFC21A; }
+.bg-brand-cyan { background-color: #14BDEB; }
+.bg-brand-teal { background-color: #0D9DA6; }
+
+.text-navy { color: #102D5C; }
+.text-navy-secondary { color: #3E4D64; }
+.text-navy-muted { color: #6B7B96; }
+.text-brand-yellow { color: #FFC21A; }
+.text-brand-cyan { color: #14BDEB; }
+.text-brand-teal { color: #0D9DA6; }
+
+.border-brand { border-color: #E2DDD5; }
+.border-brand-muted { border-color: #ECE7DE; }
+.border-navy { border-color: #102D5C; }
+.border-brand-teal { border-color: #0D9DA6; }
+.border-brand-yellow { border-color: #FFC21A; }
+
+/* Subtle card & folder motif shadows */
+.card-shadow {
+  box-shadow: 0 4px 20px -2px rgba(16, 45, 92, 0.06), 0 2px 6px -1px rgba(16, 45, 92, 0.04);
+}
+
+.card-shadow-hover {
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.card-shadow-hover:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px -4px rgba(16, 45, 92, 0.12), 0 4px 10px -2px rgba(16, 45, 92, 0.06);
+}
