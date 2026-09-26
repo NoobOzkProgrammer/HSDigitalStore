@@ -55,9 +55,9 @@ export function Header() {
             </div>
 
             {/* Brand Logo */}
-            <div className="flex-shrink-0 flex items-center">
+            <div className="flex-shrink-0 flex items-center mr-6 lg:mr-8 xl:mr-12">
               <Link href="/" className="flex items-center gap-3 group">
-                <div className="w-10 h-10 sm:w-11 sm:h-11 relative">
+                <div className="w-10 h-10 sm:w-11 sm:h-11 relative shrink-0">
                   <Image
                     src="/brand/marks/hs-mark.svg"
                     alt="HSDigitalStore Logo Mark"
@@ -67,7 +67,7 @@ export function Header() {
                     className="object-contain transition-transform duration-300 group-hover:scale-105"
                   />
                 </div>
-                <div className="flex flex-col">
+                <div className="flex flex-col whitespace-nowrap">
                   <span className="text-xl sm:text-2xl font-extrabold tracking-tight text-navy leading-none">
                     HSDigital<span className="text-brand-teal">Store</span>
                   </span>
@@ -79,11 +79,11 @@ export function Header() {
             </div>
 
             {/* Desktop Navigation Links */}
-            <nav className="hidden lg:flex items-center space-x-7 text-sm font-semibold text-navy">
+            <nav className="hidden lg:flex items-center gap-3.5 xl:gap-6 text-xs xl:text-sm font-semibold text-navy whitespace-nowrap">
               <Link href="/shop" className="hover:text-brand-teal transition-colors">
                 Shop All
               </Link>
-              <Link href="/shop?category=printable-wall-art" className="hover:text-brand-teal transition-colors flex items-center gap-1">
+              <Link href="/shop?category=printable-wall-art" className="hover:text-brand-teal transition-colors">
                 Printable Art
               </Link>
               <Link href="/shop?category=frame-tv-art" className="hover:text-brand-teal transition-colors">
@@ -98,10 +98,10 @@ export function Header() {
               <Link href="/shop?category=print-on-demand" className="hover:text-brand-teal transition-colors">
                 Physical Prints
               </Link>
-              <Link href="/blog" className="hover:text-brand-teal transition-colors">
+              <Link href="/blog" className="hidden xl:inline hover:text-brand-teal transition-colors">
                 Blog
               </Link>
-              <Link href="/custom-orders" className="hover:text-brand-teal transition-colors text-brand-teal flex items-center gap-1">
+              <Link href="/custom-orders" className="hover:text-brand-teal transition-colors text-brand-teal font-bold">
                 Custom Orders
               </Link>
             </nav>

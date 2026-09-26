@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Heart, ShoppingBag, Download, Package, Star, Sparkles } from 'lucide-react';
@@ -18,6 +18,7 @@ export function ProductCard({ product }: ProductCardProps) {
 
   const isFavorited = isInWishlist(product.id);
   const featuredImage = product.images?.[0]?.url || '/brand/social/og-default.png';
+  const [imgSrc, setImgSrc] = useState(featuredImage);
   const effectivePrice = product.salePrice || product.basePrice;
 
   const handleQuickAdd = (e: React.MouseEvent) => {
@@ -38,11 +39,12 @@ export function ProductCard({ product }: ProductCardProps) {
       <div className="relative aspect-square w-full bg-[#FAF7F2] overflow-hidden">
         <Link href={`/product/${product.slug}`} className="block w-full h-full">
           <Image
-            src={featuredImage}
+            src={imgSrc}
             alt={product.images?.[0]?.altText || product.title}
             fill
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
             className="object-cover transition-transform duration-500 group-hover:scale-105"
+            onError={() => setImgSrc('/brand/social/og-default.png')}
           />
         </Link>
 
